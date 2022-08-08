@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    .bg-darkcyan {
+      background-color: darkcyan;
+    }
+
+    .bg-darkgoldenrod {
+      background-color: darkgoldenrod;
+    }
+
+    .bg-darkblue {
+      background-color: darkblue;
+    }
+
+    .bg-darkorange {
+      background-color: darkorange;
+    }
+
+    .bg-deeppink {
+      background-color: deeppink;
+    }
+
+    .bg-deepskyblue {
+      background-color: deepskyblue;
+    }
+
+    #mainsection {
+      width: 90%;
+      margin: auto;
+      padding: 30px;
+      color: white;
+    }
+
+    #services {
+      padding: 20px;
+      overflow: auto;
+    }
+
+    .sbox {
+      width: 24%;
+      margin: 0.5%;
+      float: left;
+      height: 300px;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="mainsection" class="bg-darkcyan">
+    <label id="out"></label>
+    <br>
+    <input type="text" id="input">
+    <button onclick="btnoprclick(this)">+</button>
+    <button onclick="btnoprclick(this)">-</button>
+    <button onclick="btnoprclick(this)">*</button>
+    <button onclick="btneqlclick()">=</button>
+
+
+
+
+  </div>
+
+  <script>
+
+    let val1, val2, opr, ans;
+    function btnoprclick(data) {
+      val1 = document.querySelector("#input").value;
+      opr = data.innerText;
+      document.querySelector("#out").innerText=val1+opr;
+    
+    }
+
+    function btneqlclick() {
+      console.log(val1);
+      console.log(opr);
+
+      val2 = document.querySelector("#input").value;
+      console.log(val2);
+
+      switch (opr) {
+        case '+':
+          ans = parseInt(val1) + parseInt(val2);
+          break;
+        case '-':
+          ans = val1 - val2;
+          break;
+        case '*':
+          ans = val1 * val2;
+          break;
+      }
+      document.querySelector("#out").innerText+=val2+"="+ans;
+
+
+    }
+
+
+  </script>
+</body>
+
+</html>

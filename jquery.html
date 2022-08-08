@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery/jquery.js"></script> -->
+    <style>
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: rgb(63, 63, 235);
+            text-transform: capitalize;
+        }
+
+        #box1 {
+            width: 30%;
+            padding: 10px;
+            background-color: teal;
+            color: white;
+            margin: auto;
+        }
+
+        .red {
+            background-color: red !important;
+        }
+
+        .tcenter {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>jQuery CSS Method </h1>
+    <div id="box1">
+        <h2> The One Web Technology</h2>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+
+        <input type="text" id="txt">
+        <span id="txt1">
+
+            <button type="button">Click Me1</button>
+            <button type="button">Click Me2</button>
+            <button type="button">Click Me3</button>
+            <button type="button">Click Me4</button>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+
+        $(document).ready(function () {
+            $("#txt").keypress(function () {
+                $("#txt1").text($(this).val());
+
+            });
+
+
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+}
+
+.bg-darkcyan {
+    background-color: darkcyan;
+}
+
+.bg-darkgoldenrod {
+    background-color: darkgoldenrod;
+}
+
+.bg-darkblue {
+    background-color: darkblue;
+}
+
+.bg-darkorange {
+    background-color: darkorange;
+}
+
+.bg-deeppink {
+    background-color: deeppink;
+}
+
+.bg-deepskyblue {
+    background-color: deepskyblue;
+}
+
+.row {
+    clear: both;
+}
+
+.owt-12 {
+    width: 100%;
+    float: left;
+}
+
+.owt-6 {
+    width: 50%;
+    float: left;
+
+}
+
+.owt-4 {
+    width: 33.3333%;
+    float: left;
+
+}
+
+.owt-3 {
+    width: 25%;
+    float: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+.tcenter{
+    text-align: center;
+}
+h1 {
+    /* background-color: darkgoldenrod; */
+}
+
+
+
+ul {
+    list-style-type: none;
+    background-color: darkcyan;
+
+}
+
+ul li {
+    display: inline-block;
+    transition: 1s;
+}
+
+ul li:hover {
+    background-color: rgb(41, 219, 41);
+    box-shadow: 0 0 2px black;
+}
+ul li:hover a{
+    color: tomato;
+}
+ul li a {
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation-name: owtanimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.red{
+    color: red;
+}
+

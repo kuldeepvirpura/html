@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* header section */
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+header h3, #mainmenu {
+    display: inline-block;
+}
+
+#mainmenu {
+    float: right;
+}
+
+#mainmenu ul {
+    list-style-type: none;
+}
+
+#mainmenu ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+#mainmenu ul li a {
+    color: white;
+    text-decoration: none;
+}
+.toggle-button {
+    width: 35px;
+    height: 35px;
+    float: right;
+    display: none;
+}
+.toggle-button span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    display: block;
+    margin: 6px 0px;
+}
+
+/* Banner Section CSS */
+
+#banner {
+    background-image: url("https://www.itic.org/contentAsset/image/bb16ba6f-2265-43e0-ab25-bbef96984ddb");
+    color: white;
+    text-align: center;
+    padding: 200px 50px;
+}
+
+#banner h1 {
+    font-size: 70px;
+}
+
+#banner p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* Skill Section */
+
+#skill .skillbox {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#skill .skillbox h3 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+/* Responsive Code */
+
+@media only screen and (max-width:768px) {
+    #skill .skillbox {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:576px) {
+    #mainmenu {
+        display: none;
+        overflow: auto;
+    }
+    .toggle-button{
+        display: inline-block;
+    }
+    #banner h1 {
+        font-size: 40px;
+    }
+    #banner p {
+        font-size: 20px;
+    }
+    #skill .skillbox {
+        width: 100%;
+    }
+}

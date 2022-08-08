@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        .bg-darkcyan {
+            background-color: darkcyan;
+
+
+        }
+
+        .bg-darkgoldenrod {
+            background-color: darkgoldenrod;
+
+
+        }
+
+        .bg-darkblue {
+            background-color: darkblue;
+
+        }
+
+        .bg-darkorange {
+            background-color: darkorange;
+        }
+
+        .bg-deeppink {
+            background-color: deeppink;
+        }
+
+        .bg-deepskyblue {
+            background-color: deepskyblue;
+        }
+
+        .row {
+            clear: both;
+        }
+
+        .owt-12 {
+            width: 100%;
+            float: left;
+        }
+
+        .owt-6 {
+            width: 50%;
+            float: left;
+
+        }
+
+        .owt-4 {
+            width: 33.3333%;
+            float: left;
+            padding: 5px;
+            box-sizing: border-box;
+
+        }
+
+        .owt-3 {
+            width: 25%;
+            float: left;
+
+        }
+
+        .container {
+            width: 60%;
+            margin: auto;
+        }
+
+        section {
+            perspective: 700px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            transition: 1s;
+
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+            transform-style: preserve-3d;
+            box-shadow: 0 0 5px 1px;
+            border-radius: 5px;
+        }
+
+        .card .front,
+        .card .back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .front img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .back {
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .back h4 {
+            line-height: 300px;
+            text-align: center;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        th {
+            color: darkblue;
+        }
+
+        table,
+        td,
+        th {
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div></div>
+    <br>
+    <input id="pname" type="text">
+    <input id="pprice" type="number">
+    <input id="pqty" type="number">
+    <button type="button" onclick="Addrecord()">ADD</button>
+    <br>
+    <br>
+
+    <hr>
+    <table id="plist">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>TOT</th>
+            <th>Action</th>
+
+        </tr>
+       
+    </table>
+    <script>
+        function Addrecord() {
+          
+        document.getElementById("plist").innerHTML+="<tr><td>"+
+            document.getElementById("pname").value+
+            "</td><td>"+
+                document.getElementById("pprice").value+
+                "</td><td>"+document.getElementById("pqty").value+
+                    "</td><td>"+parseInt(document.getElementById("pprice").value) * document.getElementById("pqty").value+"</td><td><button type='button' onclick='Removerecord(this)'>Remove</button></td></tr>";
+
+                    document.getElementById("pname").value="";
+                    document.getElementById("pprice").value="";
+                    document.getElementById("pqty").value="";
+
+
+        }
+        
+        function Removerecord(data) {
+            // document.getElementById("pprice").children
+            document.getElementById("pname").value=data.parentElement.parentElement.children[0].innerText;
+            document.getElementById("pprice").value=data.parentElement.parentElement.children[1].innerText;
+            document.getElementById("pqty").value=data.parentElement.parentElement.children[2].innerText;
+
+
+        }
+    </script>
+
+</body>
+
+</html>
